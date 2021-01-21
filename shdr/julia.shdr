@@ -103,7 +103,7 @@ float Julia(vec2 z) {
 }           
 
 void main() {
-    float c = log(Julia(vec2(pos.x, pos.y))) / log(maxIterations);
+    float c = Julia(vec2(pos.x, pos.y)) / maxIterations;
     vec3 color = hsv2rgb(vec3(c, 0.5, 1.0));
     gl_FragColor = vec4(color.x, // R
                         color.y, // G
